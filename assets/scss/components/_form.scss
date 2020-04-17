@@ -1,0 +1,14 @@
+.form {
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+
+}

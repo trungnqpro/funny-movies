@@ -15,6 +15,13 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  /**
+     * config local server|port
+     */
+    server: {
+      port: process.env.PORT,
+      host: '0.0.0.0'
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -33,16 +40,21 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg',
   ],
+  styleResources: {
+    scss: [
+      '~assets/scss/style.scss',
+    ]
+  },
   /*
   ** Build configuration
   */
@@ -50,7 +62,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }
