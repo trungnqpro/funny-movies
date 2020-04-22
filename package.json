@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "homepage": "https://trungnqpro.github.io/funny-movies/",
     "predeploy": "npm run generate",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.7",
@@ -20,12 +21,21 @@
     "@nuxtjs/toast": "^3.3.0",
     "gh-pages": "^2.2.0",
     "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
     "nuxt": "^2.0.0",
     "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@vue/test-utils": "^1.0.0-beta.33",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^25.4.0",
+    "jest": "^25.4.0",
+    "jest-serializer-vue": "^2.0.2",
     "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vue-jest": "^3.0.5"
   }
 }
