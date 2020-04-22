@@ -124,7 +124,7 @@ export default {
      * redirect to share page
      */
     handleRedirectShare() {
-      window.location.href = "/share";
+      this.$router.push("/share")
     }
   }
 };
