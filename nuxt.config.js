@@ -51,6 +51,7 @@ export default {
   ],
 
   router: {
+    base: '/funny-movies/',
     middleware: ['check-auth']
   },
   /*
@@ -104,6 +105,7 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-    }
+    },
+    publicPath: process.env.STATIC_URL,
   }
 }
