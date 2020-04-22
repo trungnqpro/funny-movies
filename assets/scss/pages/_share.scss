@@ -1,0 +1,32 @@
+.share-movie {
+    padding: 10rem 5rem;
+
+    @include absCenter;
+    box-shadow: 0 2rem 4rem rgba($color-black, .2);
+    border-radius: 3px;
+    border: 1px solid $color-black;
+
+    .form {
+        display: block;
+
+        &__label2 {
+            display: inline-block;
+            font-size: $default-font-size;
+            margin-right: 1rem;
+        }
+
+        &__group {
+            display: block;
+
+            &--button {
+                text-align: center;
+                margin-top: 2rem;
+            }
+        }
+
+        &__input {
+            min-width: 40rem;
+            @include clearfix;
+        }
+    }
+}

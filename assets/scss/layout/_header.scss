@@ -1,2 +1,43 @@
 .header {
+    height: 8rem;
+    position: relative;
+    background-color: transparent;
+    border-bottom: 1px solid $color-grey-dark;
+    
+    &__logo {
+        position: absolute;
+        height: 4rem;
+        width: 4rem;
+        top: 1rem;
+    }
+
+    &__title {
+        margin-left: 5rem;
+        margin-top: 2rem;
+        font-size: 3rem;
+        font-weight: 300;
+        word-spacing: 2px;
+    }
+
+
+    &__signin {
+        // display: none;
+        margin-top: 2rem;
+        font-size: $default-font-size;
+
+        &--username {
+            display: inline-block;
+        }
+    }
+
+
+    &__anynomous {
+        
+        margin-top: 2rem;
+        .signin__form {
+
+        }
+    }
+
+    
 }

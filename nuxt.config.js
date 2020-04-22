@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 
 export default {
   mode: 'universal',
@@ -13,14 +15,19 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      {
+        src: "https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"
+      }
     ]
   },
   /**
      * config local server|port
      */
-    server: {
-      port: process.env.PORT,
-      host: '0.0.0.0'
+  server: {
+    port: process.env.PORT,
+    host: '0.0.0.0'
   },
   /*
   ** Customize the progress-bar color
@@ -35,7 +42,17 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src: '~/plugins/youtube',
+      mode: 'client'
+    },
+
+    '@/plugins/axios',
   ],
+
+  router: {
+    middleware: ['check-auth']
+  },
   /*
   ** Nuxt.js dev-modules
   */
@@ -49,11 +66,35 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
+    '@nuxtjs/axios',
+    '@nuxtjs/toast',
   ],
+  /*
+  ** Axios module configuration
+  ** See https://axios.nuxtjs.org/options
+  */
+  axios: {
+    baseURL: process.env.BASE_URL_API || "localhost:3000", // Default: http://[HOST]:[PORT][PREFIX]
+    redirectError: {
+      401: '/login',
+      404: '/404',
+      500: '/404',
+    },
+    debug: false, // default false
+  },
   styleResources: {
     scss: [
       '~assets/scss/style.scss',
     ]
+  },
+  /*
+  ** Toast module configuration
+  */
+  toast: {
+    position: 'top-right',
+    theme: 'bubble',
+    duration: 3000,
+    iconPack: 'material'
   },
   /*
   ** Build configuration

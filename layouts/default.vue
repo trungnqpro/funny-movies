@@ -1,8 +1,8 @@
 <template>
-  <div class="page-wrap layout-default">
+  <div class="layout-default">
     <TheHeader />
 
-    <nuxt class="page-content" />
+    <nuxt />
   </div>
 </template>
 

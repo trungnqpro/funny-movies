@@ -1,15 +1,22 @@
-body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    color: $color-grey-dark;
-    padding: 3rem;
-}
-
 .paragraph {
-    font-size: $default-font-size;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-grey-dark;
+    padding-top: 1rem;
 
     &:not(:last-child) {
         margin-bottom: 3rem;
     }
+}
+
+.heading-primary {
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    text-align: center;
+
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+
 }

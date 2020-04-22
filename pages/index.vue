@@ -1,10 +1,28 @@
 <template>
-  <h1>Home page</h1>
+  <div class="container">
+    <YtCard />
+  </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+import YtCard from "~/components/page/home/YtCard.vue";
+
 export default {
-  name: "Home"
+  name: "Home",
+
+  components: {
+    YtCard
+  },
+
+  methods: {
+    ...mapActions("video", ["getVideos"])
+  },
+
+  mounted() {
+    // get list videos when page loaded
+    this.getVideos();
+  }
 };
 </script>
 
