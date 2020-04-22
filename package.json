@@ -8,13 +8,17 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "homepage": "https://trungnqpro.github.io/funny-movies/",
+    "predeploy": "npm run generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.9.7",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/svg": "^0.1.11",
     "@nuxtjs/toast": "^3.3.0",
+    "gh-pages": "^2.2.0",
     "js-cookie": "^2.2.1",
     "nuxt": "^2.0.0",
     "vue-youtube": "^1.4.0"
