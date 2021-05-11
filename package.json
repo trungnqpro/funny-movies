@@ -21,7 +21,7 @@
     "@nuxtjs/toast": "^3.3.0",
     "gh-pages": "^2.2.0",
     "js-cookie": "^2.2.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "nuxt": "^2.0.0",
     "vue-youtube": "^1.4.0"
   },
